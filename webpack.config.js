@@ -28,15 +28,17 @@ module.exports = {
               loader: "ts-loader",
           },
 
-          // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-          {enforce: "pre", test: /\.js$/, loader: "source-map-loader"},
           {
-              test: /\.css$/,
-              use: [{loader: "style-loader"}, {loader: "css-loader"}]
-          },
+            test: /\.(scss)$/,
+            use: [
+                'style-loader',
+                'css-loader',
+                'postcss-loader',
+                'sass-loader'
+            ]
+        },
       ]
   },
-
   optimization: {
       splitChunks: {
           chunks: "all"
