@@ -2,54 +2,54 @@ import React from "react";
 import "./style.scss";
 
 interface State {
-  timeframe: string | null;
+  timeFrame: string | null;
 }
 
-export class GCPMetrics extends React.Component<{}, State> {
-  timeframes: { key: string; value: string }[] = [
-    {
-      key: "1h",
-      value: "One Hour"
-    },
-    {
-      key: "6h",
-      value: "Six Hours"
-    },
-    {
-      key: "1d",
-      value: "One Day"
-    },
-    {
-      key: "1w",
-      value: "One Week"
-    },
-    {
-      key: "1M",
-      value: "One Month"
-    },
-    {
-      key: "6w",
-      value: "Six Weeks"
-    }
-  ];
+const timeFrames: { key: string; value: string }[] = [
+  {
+    key: "1h",
+    value: "One Hour"
+  },
+  {
+    key: "6h",
+    value: "Six Hours"
+  },
+  {
+    key: "1d",
+    value: "One Day"
+  },
+  {
+    key: "1w",
+    value: "One Week"
+  },
+  {
+    key: "1M",
+    value: "One Month"
+  },
+  {
+    key: "6w",
+    value: "Six Weeks"
+  }
+];
 
+export class GCPMetrics extends React.Component<{}, State> {
   constructor(props: {}) {
     super(props);
 
     this.state = {
-      timeframe: "1h"
+      timeFrame: "1h"
     };
   }
 
-  handleTimeframeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  handleTimeFrameChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     this.setState({
-      timeframe: event.currentTarget.value
+      timeFrame: event.currentTarget.value
     });
   };
 
   srcForChart = (id: string) => {
     return `https://public.google.stackdriver.com/public/chart/${id}?drawMode=color&showLegend=true&theme=light&autoRefresh=true&timeframe=${
-      this.state.timeframe
+      this.state.timeFrame
     }`;
   };
 
@@ -57,11 +57,11 @@ export class GCPMetrics extends React.Component<{}, State> {
     return (
       <div>
         <div className="text-right mt-3 mr-5">
-          <select onChange={this.handleTimeframeChange}>
-            {this.timeframes.map(
-              (timeframe: { key: string; value: string }) => (
-                <option value={timeframe.key} key={timeframe.key}>
-                  {timeframe.value}
+          <select onChange={this.handleTimeFrameChange}>
+            {timeFrames.map(
+              (timeFrame: { key: string; value: string }) => (
+                <option value={timeFrame.key} key={timeFrame.key}>
+                  {timeFrame.value}
                 </option>
               )
             )}
