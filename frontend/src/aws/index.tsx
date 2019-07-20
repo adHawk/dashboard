@@ -137,8 +137,8 @@ export class AWSMetrics extends React.Component<{}, State> {
     };
 
     AWS.config = new AWS.Config();
-    AWS.config.accessKeyId = "AKIAXIPEH3LBXVKMWW6U";
-    AWS.config.secretAccessKey = "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";
+    AWS.config.accessKeyId = "AKIAXIPEH3LB6YVHTE3H";
+    AWS.config.secretAccessKey = "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";
     AWS.config.region = "us-west-2";
 
     var cw = new AWS.CloudWatch();
@@ -148,7 +148,6 @@ export class AWSMetrics extends React.Component<{}, State> {
     };
 
     cw.getMetricWidgetImage(params, (err: any, data: any) => {
-      debugger;
       if (err) {
         console.log(err, err.stack); // an error occurred
       } else {
