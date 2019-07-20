@@ -13,7 +13,7 @@ app.use("/assets", express_1.default.static(path_1.default.join(__dirname, "fron
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.get('/', function (req, res) {
-    res.render('index', { weather: null, error: null });
+    res.render('index');
 });
 app.post('/', function (req, res) {
     let city = req.body.city;

@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import { TabContent, TabPane, Card, Button, CardTitle, CardText, Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
 var classnames = require('classnames');
+var AWS = require('aws-sdk');
 
 import "./style.scss";
+import { AWSMetrics } from "./aws/index";
 
 interface State {
   activeTab: string;
@@ -108,7 +110,7 @@ class App extends React.Component<{}, State> {
             </div>
         </TabPane>
         <TabPane tabId="2">
-
+          <AWSMetrics />
         </TabPane>
       </TabContent>
       </div>
