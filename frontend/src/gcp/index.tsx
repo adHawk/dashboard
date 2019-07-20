@@ -55,17 +55,29 @@ export class GCPMetrics extends React.Component<{}, State> {
   render() {
     return (
       <div>
-        <div className="text-right mt-3 mr-5">
-          <select onChange={this.handleTimeFrameChange}>
-            {timeFrames.map(
-              (timeFrame: { key: string; value: string }) => (
+        <div className="row">
+          <div className="col-6">
+            <ul className="health-status list-inline mt-3 ml-5">
+              <li className="list-inline-item">
+                <span className="health-status__icon rounded-circle bg-success mr-2 align-middle" />
+                <span className="align-middle">Redis</span>
+              </li>
+              <li className="list-inline-item ml-3">
+                <span className="health-status__icon rounded-circle bg-success mr-2 align-middle" />
+                <span className="align-middle">Postgres</span>
+              </li>
+            </ul>
+          </div>
+          <div className="col-6 text-right mt-3 pr-5">
+            <select onChange={this.handleTimeFrameChange}>
+              {timeFrames.map((timeFrame: { key: string; value: string }) => (
                 <option value={timeFrame.key} key={timeFrame.key}>
                   {timeFrame.value}
                 </option>
-              )
-            )}
-            ;
-          </select>
+              ))}
+              ;
+            </select>
+          </div>
         </div>
         <div className="row">
           <div className="col-6">

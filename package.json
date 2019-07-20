@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:backend": "tsc --build ./src/tsconfig.json",
-    "start": "node ./dist/server.js",
+    "start": "npm run build:backend && npm run build:frontend && node ./dist/server.js",
     "build:frontend": "webpack"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "body-parser": "^1.17.2",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
+    "dotenv": "^8.0.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "jquery": "^3.4.1",

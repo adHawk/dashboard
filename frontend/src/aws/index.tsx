@@ -137,8 +137,8 @@ export class AWSMetrics extends React.Component<{}, State> {
     };
 
     AWS.config = new AWS.Config();
-    AWS.config.accessKeyId = "AKIAXIPEH3LB6YVHTE3H";
-    AWS.config.secretAccessKey = "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";
+    AWS.config.accessKeyId = (window as any).awsAccessKeyId; // Hack for now. TODO: move this to server side
+    AWS.config.secretAccessKey = (window as any).awsSecretAccessKey;
     AWS.config.region = "us-west-2";
 
     var cw = new AWS.CloudWatch();
@@ -168,7 +168,12 @@ export class AWSMetrics extends React.Component<{}, State> {
     }
     return window.btoa(binary);
   }
+  
   render() {
+    if(this.state.base64 == null) {
+      return null;
+    }
+
     return <img src={`data:image/png;base64, ${this.state.base64}`} />;
   }
 }
