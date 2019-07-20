@@ -178,41 +178,132 @@ class AWSMetrics extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
     }
     componentDidMount() {
         var metricWidget = {
-            "metrics": [
-                ["AWS/EC2", "CPUUtilization", "InstanceId", "i-a6081333", { "stat": "Average", "id": "m0r0", "label": "Automation_Staging", "visible": false }],
-                ["...", "i-067ef8d114f85ac8b", { "stat": "Average", "id": "m0r1", "label": "quora-scrape", "visible": false }],
-                ["...", "i-023066bc0f84ecafe", { "stat": "Average", "id": "m0r2", "label": "nexus-production", "visible": false }],
-                ["...", "i-035c7d47201dd3a29", { "stat": "Average", "id": "m0r3", "label": "Production" }],
-                ["...", "i-0d88a4bf3eb6e023b", { "stat": "Average", "id": "m0r4", "label": "Staging" }],
-                ["...", "i-0ad0f02aceb64c123", { "stat": "Average", "id": "m0r5", "label": "ads-staging", "visible": false }],
-                ["...", "i-06672f18a1d097870", { "stat": "Average", "id": "m0r6", "label": "nexus-staging", "visible": false }],
-                ["...", "i-01428ea8b60cd8611", { "stat": "Average", "id": "m0r7", "label": "ads-production", "visible": false }],
-                ["...", "i-0ad4112dc40b06ed7", { "stat": "Average", "id": "m0r8", "label": "jenkins", "visible": false }],
-                ["...", "i-0d294a0d37e63b60f", { "stat": "Average", "id": "m0r9", "label": "Automation_Production", "visible": false }],
-                ["...", "i-019d5de2649d57a46", { "stat": "Average", "id": "m0r10", "label": "Automation_Dev", "visible": false }],
-                ["...", "i-06dfe6071d1565fff", { "stat": "Average", "id": "m0r11", "label": "jenkins-windows-runner", "visible": false }],
-                ["AWS/ElasticBeanstalk", "EnvironmentHealth", "EnvironmentName", "Production", { "stat": "Average", "visible": false }],
-                ["...", "Staging", { "stat": "Average", "visible": false }]
+            metrics: [
+                [
+                    "AWS/EC2",
+                    "CPUUtilization",
+                    "InstanceId",
+                    "i-a6081333",
+                    {
+                        stat: "Average",
+                        id: "m0r0",
+                        label: "Automation_Staging",
+                        visible: false
+                    }
+                ],
+                [
+                    "...",
+                    "i-067ef8d114f85ac8b",
+                    { stat: "Average", id: "m0r1", label: "quora-scrape", visible: false }
+                ],
+                [
+                    "...",
+                    "i-023066bc0f84ecafe",
+                    {
+                        stat: "Average",
+                        id: "m0r2",
+                        label: "nexus-production",
+                        visible: false
+                    }
+                ],
+                [
+                    "...",
+                    "i-035c7d47201dd3a29",
+                    { stat: "Average", id: "m0r3", label: "Production" }
+                ],
+                [
+                    "...",
+                    "i-0d88a4bf3eb6e023b",
+                    { stat: "Average", id: "m0r4", label: "Staging" }
+                ],
+                [
+                    "...",
+                    "i-0ad0f02aceb64c123",
+                    { stat: "Average", id: "m0r5", label: "ads-staging", visible: false }
+                ],
+                [
+                    "...",
+                    "i-06672f18a1d097870",
+                    {
+                        stat: "Average",
+                        id: "m0r6",
+                        label: "nexus-staging",
+                        visible: false
+                    }
+                ],
+                [
+                    "...",
+                    "i-01428ea8b60cd8611",
+                    {
+                        stat: "Average",
+                        id: "m0r7",
+                        label: "ads-production",
+                        visible: false
+                    }
+                ],
+                [
+                    "...",
+                    "i-0ad4112dc40b06ed7",
+                    { stat: "Average", id: "m0r8", label: "jenkins", visible: false }
+                ],
+                [
+                    "...",
+                    "i-0d294a0d37e63b60f",
+                    {
+                        stat: "Average",
+                        id: "m0r9",
+                        label: "Automation_Production",
+                        visible: false
+                    }
+                ],
+                [
+                    "...",
+                    "i-019d5de2649d57a46",
+                    {
+                        stat: "Average",
+                        id: "m0r10",
+                        label: "Automation_Dev",
+                        visible: false
+                    }
+                ],
+                [
+                    "...",
+                    "i-06dfe6071d1565fff",
+                    {
+                        stat: "Average",
+                        id: "m0r11",
+                        label: "jenkins-windows-runner",
+                        visible: false
+                    }
+                ],
+                [
+                    "AWS/ElasticBeanstalk",
+                    "EnvironmentHealth",
+                    "EnvironmentName",
+                    "Production",
+                    { stat: "Average", visible: false }
+                ],
+                ["...", "Staging", { stat: "Average", visible: false }]
             ],
-            "title": "CPU Utilization Average",
-            "legend": {
-                "position": "right"
+            title: "CPU Utilization Average",
+            legend: {
+                position: "right"
             },
-            "copilot": true,
-            "view": "timeSeries",
-            "stacked": false,
-            "width": 1430,
-            "height": 250,
-            "start": "-PT3H",
-            "end": "P0D"
+            copilot: true,
+            view: "timeSeries",
+            stacked: false,
+            width: 1430,
+            height: 250,
+            start: "-PT3H",
+            end: "P0D"
         };
         AWS.config = new AWS.Config();
-        AWS.config.accessKeyId = "AKIAXIPEH3LBXVKMWW6U";
-        AWS.config.secretAccessKey = "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";
+        AWS.config.accessKeyId = "AKIAXIPEH3LB6YVHTE3H";
+        AWS.config.secretAccessKey = "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";
         AWS.config.region = "us-west-2";
         var cw = new AWS.CloudWatch();
         var params = {
-            MetricWidget: JSON.stringify(metricWidget),
+            MetricWidget: JSON.stringify(metricWidget)
         };
         cw.getMetricWidgetImage(params, (err, data) => {
             debugger;
@@ -229,7 +320,7 @@ class AWSMetrics extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
         });
     }
     arrayBufferToBase64(bytes) {
-        var binary = '';
+        var binary = "";
         var len = bytes.byteLength;
         for (var i = 0; i < len; i++) {
             binary += String.fromCharCode(bytes[i]);
@@ -237,10 +328,9 @@ class AWSMetrics extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component 
         return window.btoa(binary);
     }
     render() {
-        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { src: `data:image/png;base64, ${this.state.base64}` }));
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { src: `data:image/png;base64, ${this.state.base64}` });
     }
 }
-;
 
 
 /***/ }),
@@ -267,7 +357,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var classnames = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-var AWS = __webpack_require__(/*! aws-sdk */ "./node_modules/aws-sdk/lib/browser.js");
 
 
 class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
@@ -275,28 +364,28 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         super(props);
         this.timeframes = [
             {
-                key: '1h',
-                value: 'One Hour'
+                key: "1h",
+                value: "One Hour"
             },
             {
-                key: '6h',
-                value: 'Six Hours'
+                key: "6h",
+                value: "Six Hours"
             },
             {
-                key: '1d',
-                value: 'One Day'
+                key: "1d",
+                value: "One Day"
             },
             {
-                key: '1w',
-                value: 'One Week'
+                key: "1w",
+                value: "One Week"
             },
             {
-                key: '1M',
-                value: 'One Month'
+                key: "1M",
+                value: "One Month"
             },
             {
-                key: '6w',
-                value: 'Six Weeks'
+                key: "6w",
+                value: "Six Weeks"
             }
         ];
         this.toggle = (tab) => {
@@ -315,22 +404,26 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
             return `https://public.google.stackdriver.com/public/chart/${id}?drawMode=color&showLegend=true&theme=light&autoRefresh=true&timeframe=${this.state.timeframe}`;
         };
         this.state = {
-            activeTab: '1',
-            timeframe: '1h'
+            activeTab: "1",
+            timeframe: "1h"
         };
     }
     render() {
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "App" },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* Nav */ "a"], { tabs: true },
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* NavItem */ "b"], null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* NavLink */ "c"], { className: classnames({ active: this.state.activeTab === '1' }), onClick: () => { this.toggle('1'); } }, "FlooringStores")),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* NavLink */ "c"], { className: classnames({ active: this.state.activeTab === "1" }), onClick: () => {
+                            this.toggle("1");
+                        } }, "FlooringStores")),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* NavItem */ "b"], null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* NavLink */ "c"], { className: classnames({ active: this.state.activeTab === '2' }), onClick: () => { this.toggle('2'); } }, "SlingShot"))),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* NavLink */ "c"], { className: classnames({ active: this.state.activeTab === "2" }), onClick: () => {
+                            this.toggle("2");
+                        } }, "SlingShot"))),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* TabContent */ "d"], { activeTab: this.state.activeTab },
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__[/* TabPane */ "e"], { tabId: "1" },
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "text-right mt-3 mr-5" },
                         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", { onChange: this.handleTimeframeChange },
-                            this.timeframes.map((timeframe) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", { value: timeframe.key, key: timeframe.key }, timeframe.value)),
+                            this.timeframes.map((timeframe) => (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", { value: timeframe.key, key: timeframe.key }, timeframe.value))),
                             ";")),
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "row" },
                         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: "col-6" },
@@ -343,7 +436,6 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_aws_index__WEBPACK_IMPORTED_MODULE_4__[/* AWSMetrics */ "a"], null)))));
     }
 }
-;
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById("root"));
 
 
